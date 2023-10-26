@@ -1,0 +1,94 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "firstName": "Anna",
+      "lastName": "Müller",
+      "birthdate": "1995-03-15",
+      "street": "Musterstraße 1",
+      "city": "Berlin",
+      "zipcode": "10115"
+    },
+    {
+      "id": 2,
+      "firstName": "Max",
+      "lastName": "Schmidt",
+      "birthdate": "1987-07-02",
+      "street": "Hauptstraße 15",
+      "city": "Frankfurt",
+      "zipcode": "60311"
+    },
+    {
+      "id": 3,
+      "firstName": "Sophie",
+      "lastName": "Schneider",
+      "birthdate": "1990-11-22",
+      "street": "Bahnhofstraße 10",
+      "city": "Hamburg",
+      "zipcode": "20095"
+    },
+    {
+      "id": 4,
+      "firstName": "Tim",
+      "lastName": "Meyer",
+      "birthdate": "1983-05-01",
+      "street": "Lindenallee 3",
+      "city": "München",
+      "zipcode": "80331"
+    },
+    {
+      "id": 5,
+      "firstName": "Lena",
+      "lastName": "Becker",
+      "birthdate": "1998-09-17",
+      "street": "Kirchstraße 8",
+      "city": "Düsseldorf",
+      "zipcode": "40212"
+    },
+    {
+      "id": 6,
+      "firstName": "Julian",
+      "lastName": "Wagner",
+      "birthdate": "1985-01-10",
+      "street": "Goethestraße 20",
+      "city": "Stuttgart",
+      "zipcode": "70173"
+    },
+    {
+      "id": 7,
+      "firstName": "Laura",
+      "lastName": "Klein",
+      "birthdate": "1991-06-27",
+      "street": "Neue Straße 5",
+      "city": "Leipzig",
+      "zipcode": "04109"
+    },
+    {
+      "id": 8,
+      "firstName": "Felix",
+      "lastName": "Hoffmann",
+      "birthdate": "1978-12-04",
+      "street": "Rathausplatz 2",
+      "city": "Köln",
+      "zipcode": "50667"
+    },
+    {
+      "id": 9,
+      "firstName": "Sarah",
+      "lastName": "Weber",
+      "birthdate": "1992-04-19",
+      "street": "Mühlenstraße 12",
+      "city": "Hannover",
+      "zipcode": "30159"
+    },
+    {
+      "id": 10,
+      "firstName": "Jan",
+      "lastName": "Richter",
+      "birthdate": "1980-08-08",
+      "street": "Kaiserstraße 25",
+      "city": "Dresden",
+      "zipcode": "01067"
+    }
+  ]
+}
