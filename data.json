@@ -7,7 +7,7 @@
       "birthdate": "1995-03-15",
       "street": "Musterstraße 1",
       "city": "Berlin",
-      "zipcode": "10115"
+      "zipCode": "10115"
     },
     {
       "id": 2,
@@ -16,7 +16,7 @@
       "birthdate": "1987-07-02",
       "street": "Hauptstraße 15",
       "city": "Frankfurt",
-      "zipcode": "60311"
+      "zipCode": "60311"
     },
     {
       "id": 3,
@@ -25,7 +25,7 @@
       "birthdate": "1990-11-22",
       "street": "Bahnhofstraße 10",
       "city": "Hamburg",
-      "zipcode": "20095"
+      "zipCode": "20095"
     },
     {
       "id": 4,
@@ -34,7 +34,7 @@
       "birthdate": "1983-05-01",
       "street": "Lindenallee 3",
       "city": "München",
-      "zipcode": "80331"
+      "zipCode": "80331"
     },
     {
       "id": 5,
@@ -43,7 +43,7 @@
       "birthdate": "1998-09-17",
       "street": "Kirchstraße 8",
       "city": "Düsseldorf",
-      "zipcode": "40212"
+      "zipCode": "40212"
     },
     {
       "id": 6,
@@ -52,7 +52,7 @@
       "birthdate": "1985-01-10",
       "street": "Goethestraße 20",
       "city": "Stuttgart",
-      "zipcode": "70173"
+      "zipCode": "70173"
     },
     {
       "id": 7,
@@ -61,7 +61,7 @@
       "birthdate": "1991-06-27",
       "street": "Neue Straße 5",
       "city": "Leipzig",
-      "zipcode": "04109"
+      "zipCode": "04109"
     },
     {
       "id": 8,
@@ -70,7 +70,7 @@
       "birthdate": "1978-12-04",
       "street": "Rathausplatz 2",
       "city": "Köln",
-      "zipcode": "50667"
+      "zipCode": "50667"
     },
     {
       "id": 9,
@@ -79,7 +79,7 @@
       "birthdate": "1992-04-19",
       "street": "Mühlenstraße 12",
       "city": "Hannover",
-      "zipcode": "30159"
+      "zipCode": "30159"
     },
     {
       "id": 10,
@@ -88,7 +88,7 @@
       "birthdate": "1980-08-08",
       "street": "Kaiserstraße 25",
       "city": "Dresden",
-      "zipcode": "01067"
+      "zipCode": "01067"
     }
   ]
 }

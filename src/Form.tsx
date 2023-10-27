@@ -1,5 +1,7 @@
 import React, { ChangeEvent, FormEvent, useEffect, useState } from 'react';
 import { InputPerson } from './Person';
+import { useNavigate, useParams } from 'react-router-dom';
+import usePerson from './usePerson';
 
 const initialPerson: InputPerson = {
   firstName: '',
@@ -10,14 +12,12 @@ const initialPerson: InputPerson = {
   zipCode: '',
 };
 
-type Props = {
-  id?: number | null;
-  onSave: (person: InputPerson) => void;
-  onCancel: () => void;
-};
-
-const Form: React.FC<Props> = ({ id, onSave, onCancel }) => {
+const Form: React.FC = () => {
   const [person, setPerson] = useState<InputPerson>(initialPerson);
+  const { handleSave } = usePerson();
+  const navigate = useNavigate();
+
+  const { id } = useParams<{ id: string }>();
 
   useEffect(() => {
     if (id) {
@@ -36,7 +36,7 @@ const Form: React.FC<Props> = ({ id, onSave, onCancel }) => {
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    onSave(person);
+    handleSave(person);
     setPerson(initialPerson);
   }
 
@@ -103,7 +103,7 @@ const Form: React.FC<Props> = ({ id, onSave, onCancel }) => {
         />{' '}
       </label>
       <button type="submit">save</button>
-      <button type="reset" onClick={onCancel}>
+      <button type="reset" onClick={() => navigate('/')}>
         cancel
       </button>
     </form>

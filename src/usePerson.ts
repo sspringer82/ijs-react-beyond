@@ -1,11 +1,13 @@
 import { useEffect } from 'react';
 import { InputPerson } from './Person';
 import { usePersonContext } from './PersonProvider';
+import { useNavigate } from 'react-router-dom';
 
 const url = `${import.meta.env.VITE_APP_BACKEND_URL}/users`;
 
-export default function usePerson(clearAndHideForm: () => void) {
+export default function usePerson(clearAndHideForm?: () => void) {
   const [persons, setPersons] = usePersonContext();
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetch(url)
@@ -42,7 +44,7 @@ export default function usePerson(clearAndHideForm: () => void) {
           }
           return [...prevPersons, data];
         });
-        clearAndHideForm();
+        navigate('/');
       });
   }
 

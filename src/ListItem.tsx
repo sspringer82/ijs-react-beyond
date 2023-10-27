@@ -1,13 +1,13 @@
 import React from 'react';
 import Person from './Person';
+import { Link } from 'react-router-dom';
 
 type Params = {
   person: Person;
   onDelete: (id: number) => void;
-  onEdit: (id: number) => void;
 };
 
-const ListItem: React.FC<Params> = ({ person, onDelete, onEdit }) => {
+const ListItem: React.FC<Params> = ({ person, onDelete }) => {
   return (
     <tr>
       <td>{person.firstName}</td>
@@ -20,7 +20,7 @@ const ListItem: React.FC<Params> = ({ person, onDelete, onEdit }) => {
         <button onClick={() => onDelete(person.id)}>delete</button>
       </td>
       <td>
-        <button onClick={() => onEdit(person.id)}>edit</button>
+        <Link to={`/edit/${person.id}`}>edit</Link>
       </td>
     </tr>
   );
