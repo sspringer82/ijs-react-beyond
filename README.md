@@ -20,7 +20,9 @@ https://github.com/sspringer82/ijs-react-beyond
 - https://github.com/enaqx/awesome-react
 - https://m3.material.io/
 - https://mui.com/material-ui/
-- 
+- Data fetching:
+  - https://swr.vercel.app/
+  - https://tanstack.com/query/v4/docs/react/overview
 
 ## Styling
 
