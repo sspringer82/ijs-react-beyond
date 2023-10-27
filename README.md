@@ -18,3 +18,15 @@ https://github.com/sspringer82/ijs-react-beyond
   - https://recoiljs.org/ 
   - https://github.com/pmndrs/zustand
 - https://github.com/enaqx/awesome-react
+- https://m3.material.io/
+- https://mui.com/material-ui/
+- 
+
+## Styling
+
+- inline styling with the `style` prop
+- import css files
+- use a pre processor like SCSS
+- use css modules - scoped to the current component
+- use tailwind (css utility framework)
+- CSS in JS framework like styled-components || emotion

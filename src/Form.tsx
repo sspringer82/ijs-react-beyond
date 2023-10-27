@@ -95,6 +95,11 @@ const Form: React.FC = () => {
       <label>
         zip code:{' '}
         <input
+          style={{
+            color: 'darkgray',
+            border: '1px solid black',
+            borderRadius: '5px',
+          }}
           type="text"
           name="zipCode"
           id="zipCode"
