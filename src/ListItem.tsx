@@ -1,6 +1,8 @@
 import React from 'react';
 import Person from './Person';
 import { Link } from 'react-router-dom';
+import Button from '@mui/material/Button';
+import DeleteIcon from '@mui/icons-material/Delete';
 
 type Params = {
   person: Person;
@@ -17,7 +19,13 @@ const ListItem: React.FC<Params> = ({ person, onDelete }) => {
       <td>{person.city}</td>
       <td>{person.zipCode}</td>
       <td>
-        <button onClick={() => onDelete(person.id)}>delete</button>
+        <Button
+          variant="outlined"
+          startIcon={<DeleteIcon />}
+          onClick={() => onDelete(person.id)}
+        >
+          Delete
+        </Button>
       </td>
       <td>
         <Link to={`/edit/${person.id}`}>edit</Link>
