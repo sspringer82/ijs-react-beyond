@@ -1,3 +1,11 @@
 {
-  "HELLO": "hello"
+  "LOADING": "...loading data",
+  "ERROR": "Something horrible happened!",
+  "FIRSTNAME": "first name",
+  "LASTNAME": "last name",
+  "BIRTHDATE": "birth date",
+  "STREET": "street",
+  "CITY": "city",
+  "ZIPCODE": "zip code",
+  "birthDateDate": "{value, date}"
 }

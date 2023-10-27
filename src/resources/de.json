@@ -1,3 +1,11 @@
 {
-  "HELLO": "Γειά σου"
+  "LOADING": "...lade daten",
+  "ERROR": "Oh NEIN!",
+  "FIRSTNAME": "Vorname",
+  "LASTNAME": "last name",
+  "BIRTHDATE": "birth date",
+  "STREET": "street",
+  "CITY": "city",
+  "ZIPCODE": "zip code",
+  "birthDateDate": "{value, date}"
 }

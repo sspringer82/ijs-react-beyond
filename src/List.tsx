@@ -3,9 +3,11 @@ import ListItem from './ListItem';
 import { useNavigate } from 'react-router-dom';
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 import { getAllPersons, removePerson } from './person.api';
+import { useTranslation } from 'react-i18next';
 
 const List: React.FC = () => {
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const {
     data: persons,
@@ -26,11 +28,11 @@ const List: React.FC = () => {
   });
 
   if (isLoading) {
-    return <div>...loading data</div>;
+    return <div>{t('LOADING')}</div>;
   }
 
   if (isError) {
-    return <div>Something horrible happened!</div>;
+    return <div>{t('ERROR')}</div>;
   }
 
   return (
@@ -38,12 +40,12 @@ const List: React.FC = () => {
       <table>
         <thead>
           <tr>
-            <th>first name</th>
-            <th>last name</th>
-            <th>birth date</th>
-            <th>street</th>
-            <th>city</th>
-            <th>zip code</th>
+            <th>{t('FIRSTNAME')}</th>
+            <th>{t('LASTNAME')}</th>
+            <th>{t('BIRTHDATE')}</th>
+            <th>{t('STREET')}</th>
+            <th>{t('CITY')}</th>
+            <th>{t('ZIPCODE')}</th>
           </tr>
         </thead>
         <tbody>

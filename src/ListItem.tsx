@@ -3,6 +3,7 @@ import Person from './Person';
 import { Link } from 'react-router-dom';
 import Button from '@mui/material/Button';
 import DeleteIcon from '@mui/icons-material/Delete';
+import { useTranslation } from 'react-i18next';
 
 type Params = {
   person: Person;
@@ -10,11 +11,14 @@ type Params = {
 };
 
 const ListItem: React.FC<Params> = ({ person, onDelete }) => {
+  const { t } = useTranslation();
   return (
     <tr>
       <td>{person.firstName}</td>
       <td>{person.lastName}</td>
-      <td>{person.birthdate}</td>
+      <td>
+        {t('birthDateDate', { value: new Date(person.birthdate).getTime() })}
+      </td>
       <td>{person.street}</td>
       <td>{person.city}</td>
       <td>{person.zipCode}</td>

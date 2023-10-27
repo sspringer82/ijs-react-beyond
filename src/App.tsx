@@ -5,6 +5,7 @@ import { PersonProvider } from './PersonProvider';
 import Form from './Form';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { useTranslation } from 'react-i18next';
+import LanguageSwitcher from './LanguageSwitcher';
 
 const queryClient = new QueryClient();
 
@@ -12,6 +13,7 @@ const App: React.FC = () => {
   const { t } = useTranslation();
   return (
     <>
+      <LanguageSwitcher />
       <h1>{t('HELLO')}</h1>
       <QueryClientProvider client={queryClient}>
         <PersonProvider>
