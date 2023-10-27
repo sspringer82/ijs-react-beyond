@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import Person from './Person';
 import { Link } from 'react-router-dom';
 import Button from '@mui/material/Button';
@@ -12,10 +12,11 @@ type Params = {
 
 const ListItem: React.FC<Params> = ({ person, onDelete }) => {
   const { t } = useTranslation();
+
   return (
     <tr>
-      <td>{person.firstName}</td>
-      <td>{person.lastName}</td>
+      <td data-testid="firstname">{person.firstName}</td>
+      <td data-testid="lastname">{person.lastName}</td>
       <td>
         {t('birthDateDate', { value: new Date(person.birthdate).getTime() })}
       </td>
@@ -24,6 +25,7 @@ const ListItem: React.FC<Params> = ({ person, onDelete }) => {
       <td>{person.zipCode}</td>
       <td>
         <Button
+          data-testid="delete-btn"
           variant="outlined"
           startIcon={<DeleteIcon />}
           onClick={() => onDelete(person.id)}
