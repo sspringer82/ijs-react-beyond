@@ -26,3 +26,13 @@ const MyChild = () => {
   <MyChild />
 </App> */
 }
+
+function usePersonContext(): PersonContextType {
+  const context = useContext(PersonContext);
+  if (!context) {
+    throw new Error(
+      'Use the usePersonContext hook function within a PersonProvider'
+    );
+  }
+  return context;
+}
