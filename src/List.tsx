@@ -2,11 +2,12 @@ import React, { useEffect, useState } from 'react';
 import Form from './Form';
 import ListItem from './ListItem';
 import Person, { InputPerson } from './Person';
+import { usePersonContext } from './PersonProvider';
 
 const url = `${import.meta.env.VITE_APP_BACKEND_URL}/users`;
 
 const List: React.FC = () => {
-  const [persons, setPersons] = useState<Person[]>([]);
+  const [persons, setPersons] = usePersonContext();
   const [form, setForm] = useState<{ edit: number | null; showForm: boolean }>({
     edit: null,
     showForm: false,

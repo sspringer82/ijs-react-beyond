@@ -6,10 +6,9 @@ import React, {
   useState,
 } from 'react';
 
-const MyContext = createContext<[string, Dispatch<SetStateAction<string>>]>([
-  '',
-  () => '',
-]);
+type MyType = [string, Dispatch<SetStateAction<string>>];
+
+const MyContext = createContext<MyType>(['', () => '']);
 const App: React.FC = ({ children }: { children: React.ReactNode }) => {
   const state = useState('');
 
