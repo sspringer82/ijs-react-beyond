@@ -21,3 +21,8 @@ i18n.changeLanguage('de');
 // get Language
 console.log(i18n.language);
 ```
+
+Hint #2: Date formatting:
+
+Component: `{t('birthDateDate', { value: new Date(person.birthdate).getTime() })}`
+Resource: `"birthDateDate": "{value, date}"`
