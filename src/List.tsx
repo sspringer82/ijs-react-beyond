@@ -1,11 +1,37 @@
 import React from 'react';
 import ListItem from './ListItem';
-import usePerson from './usePerson';
 import { useNavigate } from 'react-router-dom';
+import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
+import { getAllPersons, removePerson } from './person.api';
 
 const List: React.FC = () => {
-  const { persons, handleDelete } = usePerson();
   const navigate = useNavigate();
+
+  const {
+    data: persons,
+    isError,
+    isLoading,
+  } = useQuery({
+    queryKey: ['persons'],
+    queryFn: getAllPersons,
+  });
+
+  const queryClient = useQueryClient();
+
+  const mutation = useMutation({
+    mutationFn: removePerson,
+    onSuccess() {
+      queryClient.invalidateQueries({ queryKey: ['persons'] });
+    },
+  });
+
+  if (isLoading) {
+    return <div>...loading data</div>;
+  }
+
+  if (isError) {
+    return <div>Something horrible happened!</div>;
+  }
 
   return (
     <>
@@ -22,7 +48,11 @@ const List: React.FC = () => {
         </thead>
         <tbody>
           {persons?.map((person) => (
-            <ListItem key={person.id} person={person} onDelete={handleDelete} />
+            <ListItem
+              key={person.id}
+              person={person}
+              onDelete={() => mutation.mutate(person.id)}
+            />
           ))}
         </tbody>
       </table>

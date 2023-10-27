@@ -23,6 +23,7 @@ https://github.com/sspringer82/ijs-react-beyond
 - Data fetching:
   - https://swr.vercel.app/
   - https://tanstack.com/query/v4/docs/react/overview
+  - https://www.npmjs.com/package/react-loading-skeleton
 
 ## Styling
 
